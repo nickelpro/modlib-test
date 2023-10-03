@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.27)
 set(CMAKE_EXPERIMENTAL_CXX_MODULE_CMAKE_API "aa1f7df0-828a-4fcd-9afc-2dc80491aca7")
 set(CMAKE_EXPERIMENTAL_CXX_MODULE_DYNDEP 1)
 
-project(moduleTest VERSION 0.0.1)
+project(modlib VERSION 0.0.1)
 
 add_library(modlib)
 target_compile_features(modlib PUBLIC cxx_std_23)
