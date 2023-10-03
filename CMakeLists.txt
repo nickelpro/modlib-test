@@ -5,10 +5,12 @@ add_library(modlib)
 target_compile_features(modlib PUBLIC cxx_std_23)
 set_target_properties(modlib PROPERTIES CXX_EXTENSIONS OFF)
 
-add_executable(test)
-target_compile_features(test PRIVATE cxx_std_23)
-set_target_properties(test PROPERTIES CXX_EXTENSIONS OFF)
-target_link_libraries(test PRIVATE modlib)
+if(BUILD_TESTS)
+  add_executable(test)
+  target_compile_features(test PRIVATE cxx_std_23)
+  set_target_properties(test PROPERTIES CXX_EXTENSIONS OFF)
+  target_link_libraries(test PRIVATE modlib)
+endif()
 
 add_subdirectory(src)
 
