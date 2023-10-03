@@ -26,7 +26,7 @@ install(
 )
 install(
   EXPORT modlib-targets
-  NAMESPACE modlib
+  NAMESPACE modlib::
   DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/modlib
 )
 
